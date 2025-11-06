@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV Professionnel</title>
+    <style>
+        @page {
+            size: A4;
+            margin: 2cm;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Calibri', 'Arial', sans-serif;
+            font-size: 11pt;
+            line-height: 1.4;
+            color: #333;
+            background: white;
+            max-width: 21cm;
+            margin: 0 auto;
+            padding: 1.5cm;
+        }
+        
+        h1 {
+            font-size: 24pt;
+            color: #003366;
+            margin-bottom: 0.3cm;
+            border-bottom: 3px solid #003366;
+            padding-bottom: 0.2cm;
+        }
+        
+        h2 {
+            font-size: 14pt;
+            color: #003366;
+            margin-top: 0.6cm;
+            margin-bottom: 0.3cm;
+            border-bottom: 2px solid #6699CC;
+            padding-bottom: 0.1cm;
+        }
+        
+        h3 {
+            font-size: 12pt;
+            color: #003366;
+            margin-top: 0.4cm;
+            margin-bottom: 0.2cm;
+        }
+        
+        h4 {
+            font-size: 11pt;
+            color: #336699;
+            margin-top: 0.3cm;
+            margin-bottom: 0.15cm;
+            font-weight: bold;
+        }
+        
+        .job-header {
+            background-color: #F0F4F8;
+            padding: 0.3cm;
+            margin-bottom: 0.3cm;
+            border-left: 4px solid #003366;
+        }
+        
+        .job-title {
+            font-size: 13pt;
+            font-weight: bold;
+            color: #003366;
+        }
+        
+        .job-period {
+            font-size: 10pt;
+            color: #666;
+            font-style: italic;
+            float: right;
+        }
+        
+        .project {
+            margin-bottom: 0.5cm;
+            page-break-inside: avoid;
+        }
+        
+        .project-title {
+            font-weight: bold;
+            color: #003366;
+            margin-bottom: 0.15cm;
+        }
+        
+        ul {
+            margin-left: 0.6cm;
+            margin-top: 0.15cm;
+            margin-bottom: 0.15cm;
+        }
+        
+        li {
+            margin-bottom: 0.1cm;
+        }
+        
+        .tech-stack {
+            background-color: #F9FAFB;
+            padding: 0.2cm;
+            margin-top: 0.2cm;
+            border-left: 3px solid #6699CC;
+            font-size: 10pt;
+        }
+        
+        .tech-label {
+            font-weight: bold;
+            color: #003366;
+        }
+        
+        .section-content {
+            margin-left: 0.3cm;
+        }
+        
+        .highlight {
+            background-color: #FFF9E6;
+            padding: 0.15cm;
+            margin: 0.2cm 0;
+            border-left: 3px solid #FFB300;
+        }
+        
+        .certification {
+            margin-bottom: 0.2cm;
+            padding-left: 0.3cm;
+        }
+        
+        .clearfix::after {
+            content: "";
+            display: table;
+            clear: both;
+        }
+        
+        @media print {
+            body {
+                padding: 0;
+            }
+            .no-print {
+                display: none;
+            }
+        }
+        
+        .print-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            padding: 10px 20px;
+            background-color: #003366;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 14px;
+            z-index: 1000;
+        }
+        
+        .print-button:hover {
+            background-color: #004080;
+        }
+    </style>
+</head>
+<body>
+    <button class="print-button no-print" onclick="window.print()">📄 Imprimer / Exporter PDF</button>
+    
+    <!-- EN-TÊTE AVEC COORDONNÉES -->
+    <div style="text-align: center; margin-bottom: 0.8cm; padding-bottom: 0.5cm; border-bottom: 3px solid #003366;">
+        <h1 style="border: none; padding: 0; margin-bottom: 0.3cm; font-size: 28pt;">VOTRE NOM PRÉNOM</h1>
+        <div style="font-size: 11pt; color: #666; line-height: 1.6;">
+            <div style="margin-bottom: 0.2cm;">
+                <strong style="color: #003366;">Consultant Senior Java/JEE</strong> | Architecture & Développement
+            </div>
+            <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 20px;">
+                <span>📧 tarik.zekri@gmail.com</span>
+                <span>📱 +212 6 61 93 84</span>
+                <span>📍 Casablanca, Maroc</span>
+            </div>
+            <div style="margin-top: 0.2cm;">
+                <span>💼 LinkedIn: https://www.linkedin.com/in/tarik-zekri-4562854b/</span>
+                <span style="margin-left: 20px;"></span>
+            </div>
+        </div>
+    </div>
+    
+    <h1 style="margin-top: 0.5cm;">EXPÉRIENCE PROFESSIONNELLE</h1>
+    
+    <!-- FREELANCE ATOS WORLDLINE -->
+    <div class="job-header clearfix">
+        <span class="job-period">Depuis Mars 2021</span>
+        <div class="job-title">Consultant Senior Java/JEE | ATOS – WORLDLINE</div>
+        <div style="font-size: 10pt; color: #666; margin-top: 0.1cm;">Clients : ENI, SNCF</div>
+    </div>
+    
+    <div class="section-content">
+        <h4>Principales responsabilités et contributions</h4>
+        
+        <div style="margin-bottom: 0.3cm;">
+            <strong style="color: #003366;">Conception et Architecture</strong>
+            <ul>
+                <li>Analyse des besoins métier et participation active à la conception de solutions techniques alignées avec les objectifs business</li>
+                <li>Contribution à l'architecture technique cible en collaboration avec les architectes d'entreprise, garantissant scalabilité, performance et maintenabilité</li>
+                <li>Coordination avec les parties prenantes : participation aux comités techniques avec les architectes, DBAs, chefs de projet et équipes d'intégration</li>
+            </ul>
+        </div>
+        
+        <div style="margin-bottom: 0.3cm;">
+            <strong style="color: #003366;">Gestion de projet et qualité</strong>
+            <ul>
+                <li>Estimation et planification : chiffrage des développements, découpage et répartition des tâches au sein de l'équipe</li>
+                <li>Assurance qualité : mise en place et animation des revues de code, garantie du respect des standards et best practices</li>
+                <li>Revue des Merge Requests : validation technique et maintien de la qualité du code avant intégration</li>
+            </ul>
+        </div>
+        
+        <div style="margin-bottom: 0.4cm;">
+            <strong style="color: #003366;">Livraison et déploiement</strong>
+            <ul>
+                <li>Gestion du cycle de vie applicatif : installation et configuration sur les environnements de développement, qualification et production</li>
+                <li>Suivi des phases de test : coordination avec les équipes QA et support à la résolution d'incidents</li>
+                <li>Garantie de livraison : pilotage de la mise en production et assurance de la stabilité des releases</li>
+            </ul>
+        </div>
+        
+        <!-- Projet SNCF -->
+        <div class="project">
+            <div class="project-title">Projet #11 : SNCF Wallet - Plateforme de Cartes Cadeaux</div>
+            
+            <p><strong>Contexte et enjeux :</strong></p>
+            <p style="margin-left: 0.3cm;">Conception et développement d'une plateforme API-first permettant à SNCF Voyageurs de proposer un service complet de cartes cadeaux dématérialisées. Le système gère l'ensemble du cycle de vie : achat, activation, consultation de solde, et utilisation via les canaux digitaux SNCF.</p>
+            
+            <p style="margin-top: 0.2cm;"><strong>Réalisations techniques clés :</strong></p>
+            <ul>
+                <li>Architecture microservices avec Spring Boot déployée sur Kubernetes</li>
+                <li>Intégration de Keycloak pour la gestion centralisée de l'authentification et des autorisations (OAuth2/OIDC)</li>
+                <li>Mise en place d'une architecture event-driven avec Google Pub/Sub pour le découplage des services</li>
+                <li>Intégration de ePay pour le traitement sécurisé des paiements</li>
+                <li>Système de notifications push via SmartPush pour l'engagement utilisateur</li>
+                <li>Documentation API avec Swagger/OpenAPI pour faciliter l'intégration par les équipes front-end</li>
+            </ul>
+            
+            <p style="margin-top: 0.2cm;"><strong>Impact et bénéfices :</strong></p>
+            <ul>
+                <li>Solution scalable capable de gérer des pics de charge importants (périodes de fêtes)</li>
+                <li>Temps de réponse API < 200ms pour une expérience utilisateur optimale</li>
+                <li>Architecture cloud-native facilitant la haute disponibilité et la résilience</li>
+                <li>Documentation exhaustive réduisant le time-to-market pour les nouvelles intégrations</li>
+            </ul>
+            
+            <div class="tech-stack">
+                <span class="tech-label">Backend & Framework :</span> Spring Boot 2.3, Spring Data JPA, Spring Security, Spring MVC<br>
+                <span class="tech-label">Sécurité & IAM :</span> Keycloak (OAuth2, OIDC)<br>
+                <span class="tech-label">Base de données :</span> PostgreSQL<br>
+                <span class="tech-label">Messaging & Events :</span> Google Pub/Sub<br>
+                <span class="tech-label">Paiement & Notifications :</span> ePay, SmartPush<br>
+                <span class="tech-label">Conteneurisation & Orchestration :</span> Docker, Kubernetes<br>
+                <span class="tech-label">Build & CI/CD :</span> Maven, Git, GitLab CI/CD<br>
+                <span class="tech-label">Testing & Documentation :</span> JUnit, Mockito, Swagger/OpenAPI<br>
+                <span class="tech-label">Serveur d'application :</span> Tomcat (embedded)
+            </div>
+        </div>
+        
+        <!-- Projet ENI-DIBS -->
+        <div class="project">
+            <div class="project-title">Projet #10 : ENI-DIBS</div>
+            <p><strong>Contexte :</strong> Plateforme de facturation électronique permettant la gestion complète du cycle de vie des factures (création, validation, envoi, archivage) avec intégration aux systèmes tiers.</p>
+            
+            <div class="tech-stack">
+                <span class="tech-label">Technologies :</span> Spring Boot 2.3, Spring Data, Spring Security, Spring MVC, Keycloak, Vue.js, DB2, Maven, Tomcat, Git, GitLab, Swagger, Mockito
+            </div>
+        </div>
+        
+        <!-- Projet Pay&Drive -->
+        <div class="project">
+            <div class="project-title">Projet #9 : Pay&Drive</div>
+            <p><strong>Contexte :</strong> Plateforme mutualisée orchestrant le parcours client dans l'écosystème marchand, permettant le contrôle de systèmes externes et le paiement via portefeuille mobile.</p>
+            
+            <div class="tech-stack">
+                <span class="tech-label">Technologies :</span> Spring Boot 2.3, Spring Data, Spring Security, Spring MVC, ActiveMQ, Keycloak, Angular, PostgreSQL, Maven, Tomcat, Git, GitLab, Swagger, Mockito
+            </div>
+        </div>
+    </div>
+    
+    <!-- CAPGEMINI LA POSTE -->
+    <div class="job-header clearfix">
+        <span class="job-period">Avril 2020 – Décembre 2021</span>
+        <div class="job-title">Référent Technique Java/JEE | CAPGEMINI – LA POSTE</div>
+    </div>
+    
+    <div class="section-content">
+        <div class="project">
+            <div class="project-title">Projet #8 : Notification & Sliders</div>
+            <p><strong>Mission :</strong> Développement des nouvelles fonctionnalités sur deux périmètres en parallèle. Pilotage du développement du projet Sliders from scratch.</p>
+            
+            <p style="margin-top: 0.2cm;"><strong>Responsabilités :</strong></p>
+            <ul>
+                <li>Développement de nouveaux composants réutilisables</li>
+                <li>Analyse et correction des anomalies complexes</li>
+                <li>Mise en place de l'architecture event-driven avec Kafka</li>
+            </ul>
+            
+            <div class="tech-stack">
+                <span class="tech-label">Technologies :</span> Spring Boot 2.3, Spring Data, Spring Kafka, Java 11, MySQL, Git, Jenkins, SonarQube, Kibana
+            </div>
+        </div>
+    </div>
+    
+    <!-- CAPGEMINI SUEZ ORANGE SNCF -->
+    <div class="job-header clearfix">
+        <span class="job-period">Août 2015 – Décembre 2020</span>
+        <div class="job-title">Référent Technique Java/JEE | CAPGEMINI</div>
+        <div style="font-size: 10pt; color: #666; margin-top: 0.1cm;">Clients : SUEZ, Orange, SNCF</div>
+    </div>
+    
+    <div class="section-content">
+        <div class="project">
+            <div class="project-title">Projet #7 : Applications multi-clients (VIVA, MAXIMO, NUMEREQUART, OPTIMO, CANTONNIER, VEBENE, SERVICE COMPLET, MyQuiz)</div>
+            
+            <div class="highlight">
+                <strong>Évolution de carrière sur 5 ans :</strong> Développeur Senior → Référent Technique → Technical Leader
+            </div>
+            
+            <p style="margin-top: 0.2cm;"><strong>En tant que Développeur Senior :</strong></p>
+            <ul>
+                <li>Référent technico-fonctionnel sur applications stratégiques</li>
+                <li>Pilotage des chantiers d'automatisation (CI/CD, tests)</li>
+                <li>Prise en charge des sujets techniques complexes</li>
+                <li>Formation et accompagnement des nouvelles recrues</li>
+                <li>Création et gestion de la plateforme interne : myquiz.ma.capgemini</li>
+            </ul>
+            
+            <p style="margin-top: 0.2cm;"><strong>En tant que Référent Technique :</strong></p>
+            <ul>
+                <li>Responsable technique des équipes onshore et offshore</li>
+                <li>Conception et développement autour d'une architecture SOA Java/JEE</li>
+                <li>SPOC technique auprès des clients et des équipes</li>
+                <li>Animation des revues de code et validation des livrables</li>
+            </ul>
+            
+            <p style="margin-top: 0.2cm;"><strong>En tant que Technical Leader :</strong></p>
+            <ul>
+                <li>Cadrage des besoins, chiffrage et conception des solutions techniques</li>
+                <li>Animation des instances de pilotage (COSUI, COPIL)</li>
+                <li>Coaching et évaluation des équipes (jusqu'à 13 ETP)</li>
+                <li>Pilotage de la transition technique de 7 applications</li>
+            </ul>
+            
+            <div class="tech-stack">
+                <span class="tech-label">Technologies :</span> Spring (Core, Data, Security, MVC, Boot), JPA/Hibernate, Angular 4, JSF, REST Web Services, Oracle 12g, SQL/PL-SQL, Tomcat 8, Maven, Git, SVN, Jenkins, SonarQube, JUnit, IntelliJ IDEA, Eclipse
+            </div>
+        </div>
+    </div>
+    
+    <!-- SYMPHONY TELECA -->
+    <div class="job-header clearfix">
+        <span class="job-period">Avril 2015 – Août 2015</span>
+        <div class="job-title">Ingénieur Java/JEE | SYMPHONY TELECA – MAINCARE</div>
+    </div>
+    
+    <div class="section-content">
+        <div class="project">
+            <div class="project-title">Projet #6 : ShowCase</div>
+            <p><strong>Contexte :</strong> Développement et publication d'un ensemble de composants graphiques réutilisables pour applications métier.</p>
+            
+            <p style="margin-top: 0.2cm;"><strong>Responsabilités :</strong></p>
+            <ul>
+                <li>Développement de nouveaux composants GWT</li>
+                <li>Analyse et correction des anomalies</li>
+                <li>Documentation technique des composants</li>
+            </ul>
+            
+            <div class="tech-stack">
+                <span class="tech-label">Technologies :</span> GWT, EJB3, Spring IoC, JPA/Hibernate, Oracle 10g, JBoss AS 7, Maven, Jenkins, SonarQube, JUnit, Eclipse, SVN
+            </div>
+        </div>
+    </div>
+    
+    <!-- SII MAROC -->
+    <div class="job-header clearfix">
+        <span class="job-period">Mars 2012 – Avril 2015</span>
+        <div class="job-title">Ingénieur R&D Java/JEE | SII MAROC – GEMALTO</div>
+    </div>
+    
+    <div class="section-content">
+        <div class="project">
+            <div class="project-title">Projet #5 : DPCM (Data Personalization & Card Manufacturing)</div>
+            <p><strong>Contexte :</strong> Application pour la personnalisation et la production de cartes sécurisées (permis de conduire, cartes d'identité, cartes bancaires).</p>
+            
+            <p style="margin-top: 0.2cm;"><strong>Responsabilités :</strong></p>
+            <ul>
+                <li>Participation aux phases d'étude et conception technique de la plateforme DPCM</li>
+                <li>Développement des portails de configuration et gestion des données</li>
+                <li>Rédaction de la documentation technique (installation, paramétrage)</li>
+                <li>Analyse et correction des anomalies</li>
+            </ul>
+            
+            <p style="margin-top: 0.2cm;"><strong>Validation et qualité :</strong></p>
+            <ul>
+                <li>Développement des tests unitaires et d'intégration</li>
+                <li>Rédaction des VTP et VTR (Validation Test Plan/Report)</li>
+                <li>Développement d'un module d'intégration avec TestRail</li>
+            </ul>
+            
+            <div class="tech-stack">
+                <span class="tech-label">Technologies :</span> JSF 2.0 (PrimeFaces), Spring Security, CDI, JPA/Hibernate, EJB3, Oracle 10g, JBoss AS 7, Web Services, LDAP, Maven, Git, Jenkins, SonarQube, Selenium, JUnit, Eclipse, Toad
+            </div>
+        </div>
+        
+        <div class="project">
+            <div class="project-title">Projet #4 : E-Tester (Projet interne SII)</div>
+            <p><strong>Contexte :</strong> Application d'évaluation des connaissances techniques des candidats pour le recrutement.</p>
+            
+            <p style="margin-top: 0.2cm;"><strong>Réalisation :</strong> Proposition, étude, conception et développement complet de la solution.</p>
+            
+            <div class="tech-stack">
+                <span class="tech-label">Technologies :</span> Spring Framework, JSF 2.0 (PrimeFaces), JPA/Hibernate, MySQL, Tomcat, Maven, Git, Eclipse
+            </div>
+        </div>
+    </div>
+    
+    <!-- EVISION -->
+    <div class="job-header clearfix">
+        <span class="job-period">Février 2009 – Mars 2012</span>
+        <div class="job-title">Analyste Développeur Java/JEE | EVISION</div>
+    </div>
+    
+    <div class="section-content">
+        <div class="project">
+            <div class="project-title">Projet #3 : CAMS (FCI Awards Management System)</div>
+            <p><strong>Contexte :</strong> Système de gestion des fonds de recherche pour la Fondation Canadienne pour l'Innovation (FCI), permettant aux universités, collèges et hôpitaux de gérer leurs programmes de recherche.</p>
+            
+            <p style="margin-top: 0.2cm;"><strong>Responsabilités :</strong></p>
+            <ul>
+                <li>Développement des portails Web pour le projet CAMS</li>
+                <li>Développement du module de reporting avancé</li>
+            </ul>
+            
+            <div class="tech-stack">
+                <span class="tech-label">Technologies :</span> JSF (IceFaces), EJB3, JPA, Oracle 10g, WebLogic, SSO, Flying Saucer (PDF), HTML, JavaScript, jQuery, CSS, MyEclipse, JDeveloper, Toad, JIRA, SVN
+            </div>
+        </div>
+        
+        <div class="project">
+            <div class="project-title">Projet #2 : eAwards</div>
+            <p><strong>Contexte :</strong> Logiciel de gestion des bourses et subventions permettant de contrôler et simplifier le processus d'administration de la recherche, incluant l'analyse de données et la simulation de scénarios.</p>
+            
+            <p style="margin-top: 0.2cm;"><strong>Responsabilités :</strong></p>
+            <ul>
+                <li>Développement des portails Web pour le projet eAwards</li>
+                <li>Tests et intégration des livrables</li>
+                <li>Déploiement sur les environnements Dev et Test</li>
+            </ul>
+            
+            <div class="tech-stack">
+                <span class="tech-label">Technologies :</span> JSF 1.2/2.0 (PrimeFaces, Tomahawk, Facelets), Struts 1, EJB3, Oracle 10g, WebLogic, Flying Saucer, HTML, JavaScript, jQuery, CSS, NetBeans, MyEclipse, JDeveloper, Toad, JIRA, SVN
+            </div>
+        </div>
+        
+        <div class="project">
+            <div class="project-title">Projet #1 : eSemantics</div>
+            <p><strong>Contexte :</strong> Moteur de recherche avancé capable d'analyser tout type de document et d'extraire des correspondances morphologiques ou sémantiques des mots recherchés.</p>
+            
+            <p style="margin-top: 0.2cm;"><strong>Responsabilités :</strong></p>
+            <ul>
+                <li>Conception et développement complet de la solution Web</li>
+                <li>Tests et intégration dans les autres portails</li>
+                <li>Développement d'utilitaires : FormBuilder, Gestionnaire de textes (MetaModel), Composants réutilisables</li>
+            </ul>
+            
+            <div class="tech-stack">
+                <span class="tech-label">Technologies :</span> Java/J2EE (JSP, Servlets), JSF 2.0 (PrimeFaces, Facelets), EJB3, Oracle 10g, HTML, JavaScript, jQuery, CSS, MyEclipse, NetBeans, JDeveloper, Toad
+            </div>
+        </div>
+    </div>
+    
+    <!-- FORMATION -->
+    <h2>FORMATION</h2>
+    <div class="section-content">
+        <div style="margin-bottom: 0.3cm;">
+            <strong>2009 : Master en Informatique et Télécommunications</strong><br>
+            Institut National des Postes et Télécommunications (INPT), Rabat<br>
+            Option : Informatique, Réseaux, Services (IRS)<br>
+            <em>Majorant de la promotion – Mention : Bien</em>
+        </div>
+        
+        <div style="margin-bottom: 0.3cm;">
+            <strong>2004-2007 : Licence en Sciences Mathématiques et Informatique</strong><br>
+            Faculté des Sciences, Fès<br>
+            <em>Majorant de la promotion – Mention : Bien</em>
+        </div>
+        
+        <div>
+            <strong>2003 : Baccalauréat Scientifique</strong><br>
+            Option : Sciences Expérimentales
+        </div>
+    </div>
+    
+    <!-- CERTIFICATIONS -->
+    <h2>CERTIFICATIONS</h2>
+    <div class="section-content">
+        <div class="certification">
+            <strong>2018 :</strong> Oracle Database 12c: SQL Fundamentals
+        </div>
+        <div class="certification">
+            <strong>2014 :</strong> Oracle Certified Professional, Java SE 6 Programmer
+        </div>
+    </div>
+    
+    <script>
+        // Fonction pour imprimer le document
+        function printCV() {
+            window.print();
+        }
+    </script>
+</body>
+</html>

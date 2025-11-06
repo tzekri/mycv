@@ -9,13 +9,13 @@
             size: A4;
             margin: 2cm;
         }
-        
+
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: 'Calibri', 'Arial', sans-serif;
             font-size: 11pt;
@@ -26,7 +26,153 @@
             margin: 0 auto;
             padding: 1.5cm;
         }
-        
+
+        /* PAGE DE CONNEXION */
+        #loginPage {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #003366 0%, #004080 100%);
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 9999;
+            page-break-after: always;
+        }
+
+        .login-container {
+            background: white;
+            padding: 3cm;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+            max-width: 500px;
+            width: 90%;
+            text-align: center;
+        }
+
+        .login-container h2 {
+            color: #003366;
+            margin-bottom: 0.5cm;
+            font-size: 28pt;
+            border: none;
+        }
+
+        .login-container p {
+            color: #666;
+            margin-bottom: 0.8cm;
+            font-size: 12pt;
+            line-height: 1.6;
+        }
+
+        .info-box {
+            background: #F0F4F8;
+            padding: 0.5cm;
+            border-radius: 8px;
+            margin-bottom: 1cm;
+            border-left: 4px solid #003366;
+            text-align: left;
+        }
+
+        .info-box h3 {
+            color: #003366;
+            font-size: 12pt;
+            margin-bottom: 0.3cm;
+            border: none;
+        }
+
+        .info-box ul {
+            margin-left: 0.5cm;
+            color: #555;
+        }
+
+        .info-box li {
+            margin-bottom: 0.2cm;
+        }
+
+        .login-input {
+            width: 100%;
+            padding: 15px;
+            margin-bottom: 0.5cm;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-size: 13pt;
+            transition: border-color 0.3s;
+        }
+
+        .login-input:focus {
+            outline: none;
+            border-color: #003366;
+            box-shadow: 0 0 0 3px rgba(0, 51, 102, 0.1);
+        }
+
+        .login-button {
+            width: 100%;
+            padding: 15px;
+            background: #003366;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            font-size: 13pt;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .login-button:hover {
+            background: #004080;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 51, 102, 0.3);
+        }
+
+        .error-message {
+            color: #d32f2f;
+            background: #ffebee;
+            padding: 12px;
+            border-radius: 8px;
+            margin-top: 0.5cm;
+            display: none;
+            font-weight: bold;
+        }
+
+        .lock-icon {
+            font-size: 64pt;
+            color: #003366;
+            margin-bottom: 0.3cm;
+            animation: pulse 2s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.05); }
+        }
+
+        .hint-text {
+            margin-top: 1cm;
+            padding-top: 0.5cm;
+            border-top: 1px solid #ddd;
+            font-size: 10pt;
+            color: #999;
+        }
+
+        #cvContent {
+            display: none;
+        }
+
+        #cvContent.unlocked {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* RESTE DES STYLES */
+
         h1 {
             font-size: 24pt;
             color: #003366;
@@ -34,7 +180,7 @@
             border-bottom: 3px solid #003366;
             padding-bottom: 0.2cm;
         }
-        
+
         h2 {
             font-size: 14pt;
             color: #003366;
@@ -43,14 +189,14 @@
             border-bottom: 2px solid #6699CC;
             padding-bottom: 0.1cm;
         }
-        
+
         h3 {
             font-size: 12pt;
             color: #003366;
             margin-top: 0.4cm;
             margin-bottom: 0.2cm;
         }
-        
+
         h4 {
             font-size: 11pt;
             color: #336699;
@@ -58,48 +204,48 @@
             margin-bottom: 0.15cm;
             font-weight: bold;
         }
-        
+
         .job-header {
             background-color: #F0F4F8;
             padding: 0.3cm;
             margin-bottom: 0.3cm;
             border-left: 4px solid #003366;
         }
-        
+
         .job-title {
             font-size: 13pt;
             font-weight: bold;
             color: #003366;
         }
-        
+
         .job-period {
             font-size: 10pt;
             color: #666;
             font-style: italic;
             float: right;
         }
-        
+
         .project {
             margin-bottom: 0.5cm;
             page-break-inside: avoid;
         }
-        
+
         .project-title {
             font-weight: bold;
             color: #003366;
             margin-bottom: 0.15cm;
         }
-        
+
         ul {
             margin-left: 0.6cm;
             margin-top: 0.15cm;
             margin-bottom: 0.15cm;
         }
-        
+
         li {
             margin-bottom: 0.1cm;
         }
-        
+
         .tech-stack {
             background-color: #F9FAFB;
             padding: 0.2cm;
@@ -107,34 +253,34 @@
             border-left: 3px solid #6699CC;
             font-size: 10pt;
         }
-        
+
         .tech-label {
             font-weight: bold;
             color: #003366;
         }
-        
+
         .section-content {
             margin-left: 0.3cm;
         }
-        
+
         .highlight {
             background-color: #FFF9E6;
             padding: 0.15cm;
             margin: 0.2cm 0;
             border-left: 3px solid #FFB300;
         }
-        
+
         .certification {
             margin-bottom: 0.2cm;
             padding-left: 0.3cm;
         }
-        
+
         .clearfix::after {
             content: "";
             display: table;
             clear: both;
         }
-        
+
         @media print {
             body {
                 padding: 0;
@@ -143,7 +289,7 @@
                 display: none;
             }
         }
-        
+
         .print-button {
             position: fixed;
             top: 20px;
@@ -157,15 +303,46 @@
             font-size: 14px;
             z-index: 1000;
         }
-        
+
         .print-button:hover {
             background-color: #004080;
         }
     </style>
 </head>
 <body>
+<!-- PAGE DE CONNEXION -->
+<div id="loginPage">
+    <div class="login-container">
+        <div class="lock-icon">🔒</div>
+        <h2>Accès Sécurisé</h2>
+        <p>Ce CV est protégé. Veuillez entrer le code d'accès.</p>
+
+        <input
+                type="password"
+                id="passwordInput"
+                class="login-input"
+                placeholder="Code d'accès"
+                autocomplete="off"
+        />
+
+        <button onclick="checkPassword()" class="login-button">
+            Déverrouiller
+        </button>
+
+        <div id="errorMessage" class="error-message">
+            ❌ Code d'accès incorrect
+        </div>
+
+        <p style="margin-top: 1cm; font-size: 9pt; color: #999;">
+            💡 Astuce : Le code par défaut est "cv2024"
+        </p>
+    </div>
+</div>
+
+<!-- CONTENU DU CV (MASQUÉ PAR DÉFAUT) -->
+<div id="cvContent">
     <button class="print-button no-print" onclick="window.print()">📄 Imprimer / Exporter PDF</button>
-    
+
     <!-- EN-TÊTE AVEC COORDONNÉES -->
     <div style="text-align: center; margin-bottom: 0.8cm; padding-bottom: 0.5cm; border-bottom: 3px solid #003366;">
         <h1 style="border: none; padding: 0; margin-bottom: 0.3cm; font-size: 28pt;">VOTRE NOM PRÉNOM</h1>
@@ -174,29 +351,29 @@
                 <strong style="color: #003366;">Consultant Senior Java/JEE</strong> | Architecture & Développement
             </div>
             <div style="display: flex; justify-content: center; flex-wrap: wrap; gap: 20px;">
-                <span>📧 tarik.zekri@gmail.com</span>
-                <span>📱 +212 6 61 93 84</span>
-                <span>📍 Casablanca, Maroc</span>
+                <span>📧 votre.email@exemple.com</span>
+                <span>📱 +33 X XX XX XX XX</span>
+                <span>📍 Ville, Pays</span>
             </div>
             <div style="margin-top: 0.2cm;">
-                <span>💼 LinkedIn: https://www.linkedin.com/in/tarik-zekri-4562854b/</span>
-                <span style="margin-left: 20px;"></span>
+                <span>💼 LinkedIn: linkedin.com/in/votre-profil</span>
+                <span style="margin-left: 20px;">🔗 GitHub: github.com/votre-profil</span>
             </div>
         </div>
     </div>
-    
+
     <h1 style="margin-top: 0.5cm;">EXPÉRIENCE PROFESSIONNELLE</h1>
-    
+
     <!-- FREELANCE ATOS WORLDLINE -->
     <div class="job-header clearfix">
         <span class="job-period">Depuis Mars 2021</span>
         <div class="job-title">Consultant Senior Java/JEE | ATOS – WORLDLINE</div>
         <div style="font-size: 10pt; color: #666; margin-top: 0.1cm;">Clients : ENI, SNCF</div>
     </div>
-    
+
     <div class="section-content">
         <h4>Principales responsabilités et contributions</h4>
-        
+
         <div style="margin-bottom: 0.3cm;">
             <strong style="color: #003366;">Conception et Architecture</strong>
             <ul>
@@ -205,7 +382,7 @@
                 <li>Coordination avec les parties prenantes : participation aux comités techniques avec les architectes, DBAs, chefs de projet et équipes d'intégration</li>
             </ul>
         </div>
-        
+
         <div style="margin-bottom: 0.3cm;">
             <strong style="color: #003366;">Gestion de projet et qualité</strong>
             <ul>
@@ -214,7 +391,7 @@
                 <li>Revue des Merge Requests : validation technique et maintien de la qualité du code avant intégration</li>
             </ul>
         </div>
-        
+
         <div style="margin-bottom: 0.4cm;">
             <strong style="color: #003366;">Livraison et déploiement</strong>
             <ul>
@@ -223,14 +400,14 @@
                 <li>Garantie de livraison : pilotage de la mise en production et assurance de la stabilité des releases</li>
             </ul>
         </div>
-        
+
         <!-- Projet SNCF -->
         <div class="project">
             <div class="project-title">Projet #11 : SNCF Wallet - Plateforme de Cartes Cadeaux</div>
-            
+
             <p><strong>Contexte et enjeux :</strong></p>
             <p style="margin-left: 0.3cm;">Conception et développement d'une plateforme API-first permettant à SNCF Voyageurs de proposer un service complet de cartes cadeaux dématérialisées. Le système gère l'ensemble du cycle de vie : achat, activation, consultation de solde, et utilisation via les canaux digitaux SNCF.</p>
-            
+
             <p style="margin-top: 0.2cm;"><strong>Réalisations techniques clés :</strong></p>
             <ul>
                 <li>Architecture microservices avec Spring Boot déployée sur Kubernetes</li>
@@ -240,7 +417,7 @@
                 <li>Système de notifications push via SmartPush pour l'engagement utilisateur</li>
                 <li>Documentation API avec Swagger/OpenAPI pour faciliter l'intégration par les équipes front-end</li>
             </ul>
-            
+
             <p style="margin-top: 0.2cm;"><strong>Impact et bénéfices :</strong></p>
             <ul>
                 <li>Solution scalable capable de gérer des pics de charge importants (périodes de fêtes)</li>
@@ -248,7 +425,7 @@
                 <li>Architecture cloud-native facilitant la haute disponibilité et la résilience</li>
                 <li>Documentation exhaustive réduisant le time-to-market pour les nouvelles intégrations</li>
             </ul>
-            
+
             <div class="tech-stack">
                 <span class="tech-label">Backend & Framework :</span> Spring Boot 2.3, Spring Data JPA, Spring Security, Spring MVC<br>
                 <span class="tech-label">Sécurité & IAM :</span> Keycloak (OAuth2, OIDC)<br>
@@ -261,67 +438,67 @@
                 <span class="tech-label">Serveur d'application :</span> Tomcat (embedded)
             </div>
         </div>
-        
+
         <!-- Projet ENI-DIBS -->
         <div class="project">
             <div class="project-title">Projet #10 : ENI-DIBS</div>
             <p><strong>Contexte :</strong> Plateforme de facturation électronique permettant la gestion complète du cycle de vie des factures (création, validation, envoi, archivage) avec intégration aux systèmes tiers.</p>
-            
+
             <div class="tech-stack">
                 <span class="tech-label">Technologies :</span> Spring Boot 2.3, Spring Data, Spring Security, Spring MVC, Keycloak, Vue.js, DB2, Maven, Tomcat, Git, GitLab, Swagger, Mockito
             </div>
         </div>
-        
+
         <!-- Projet Pay&Drive -->
         <div class="project">
             <div class="project-title">Projet #9 : Pay&Drive</div>
             <p><strong>Contexte :</strong> Plateforme mutualisée orchestrant le parcours client dans l'écosystème marchand, permettant le contrôle de systèmes externes et le paiement via portefeuille mobile.</p>
-            
+
             <div class="tech-stack">
                 <span class="tech-label">Technologies :</span> Spring Boot 2.3, Spring Data, Spring Security, Spring MVC, ActiveMQ, Keycloak, Angular, PostgreSQL, Maven, Tomcat, Git, GitLab, Swagger, Mockito
             </div>
         </div>
     </div>
-    
+
     <!-- CAPGEMINI LA POSTE -->
     <div class="job-header clearfix">
         <span class="job-period">Avril 2020 – Décembre 2021</span>
         <div class="job-title">Référent Technique Java/JEE | CAPGEMINI – LA POSTE</div>
     </div>
-    
+
     <div class="section-content">
         <div class="project">
             <div class="project-title">Projet #8 : Notification & Sliders</div>
             <p><strong>Mission :</strong> Développement des nouvelles fonctionnalités sur deux périmètres en parallèle. Pilotage du développement du projet Sliders from scratch.</p>
-            
+
             <p style="margin-top: 0.2cm;"><strong>Responsabilités :</strong></p>
             <ul>
                 <li>Développement de nouveaux composants réutilisables</li>
                 <li>Analyse et correction des anomalies complexes</li>
                 <li>Mise en place de l'architecture event-driven avec Kafka</li>
             </ul>
-            
+
             <div class="tech-stack">
                 <span class="tech-label">Technologies :</span> Spring Boot 2.3, Spring Data, Spring Kafka, Java 11, MySQL, Git, Jenkins, SonarQube, Kibana
             </div>
         </div>
     </div>
-    
+
     <!-- CAPGEMINI SUEZ ORANGE SNCF -->
     <div class="job-header clearfix">
         <span class="job-period">Août 2015 – Décembre 2020</span>
         <div class="job-title">Référent Technique Java/JEE | CAPGEMINI</div>
         <div style="font-size: 10pt; color: #666; margin-top: 0.1cm;">Clients : SUEZ, Orange, SNCF</div>
     </div>
-    
+
     <div class="section-content">
         <div class="project">
             <div class="project-title">Projet #7 : Applications multi-clients (VIVA, MAXIMO, NUMEREQUART, OPTIMO, CANTONNIER, VEBENE, SERVICE COMPLET, MyQuiz)</div>
-            
+
             <div class="highlight">
                 <strong>Évolution de carrière sur 5 ans :</strong> Développeur Senior → Référent Technique → Technical Leader
             </div>
-            
+
             <p style="margin-top: 0.2cm;"><strong>En tant que Développeur Senior :</strong></p>
             <ul>
                 <li>Référent technico-fonctionnel sur applications stratégiques</li>
@@ -330,7 +507,7 @@
                 <li>Formation et accompagnement des nouvelles recrues</li>
                 <li>Création et gestion de la plateforme interne : myquiz.ma.capgemini</li>
             </ul>
-            
+
             <p style="margin-top: 0.2cm;"><strong>En tant que Référent Technique :</strong></p>
             <ul>
                 <li>Responsable technique des équipes onshore et offshore</li>
@@ -338,7 +515,7 @@
                 <li>SPOC technique auprès des clients et des équipes</li>
                 <li>Animation des revues de code et validation des livrables</li>
             </ul>
-            
+
             <p style="margin-top: 0.2cm;"><strong>En tant que Technical Leader :</strong></p>
             <ul>
                 <li>Cadrage des besoins, chiffrage et conception des solutions techniques</li>
@@ -346,48 +523,48 @@
                 <li>Coaching et évaluation des équipes (jusqu'à 13 ETP)</li>
                 <li>Pilotage de la transition technique de 7 applications</li>
             </ul>
-            
+
             <div class="tech-stack">
                 <span class="tech-label">Technologies :</span> Spring (Core, Data, Security, MVC, Boot), JPA/Hibernate, Angular 4, JSF, REST Web Services, Oracle 12g, SQL/PL-SQL, Tomcat 8, Maven, Git, SVN, Jenkins, SonarQube, JUnit, IntelliJ IDEA, Eclipse
             </div>
         </div>
     </div>
-    
+
     <!-- SYMPHONY TELECA -->
     <div class="job-header clearfix">
         <span class="job-period">Avril 2015 – Août 2015</span>
         <div class="job-title">Ingénieur Java/JEE | SYMPHONY TELECA – MAINCARE</div>
     </div>
-    
+
     <div class="section-content">
         <div class="project">
             <div class="project-title">Projet #6 : ShowCase</div>
             <p><strong>Contexte :</strong> Développement et publication d'un ensemble de composants graphiques réutilisables pour applications métier.</p>
-            
+
             <p style="margin-top: 0.2cm;"><strong>Responsabilités :</strong></p>
             <ul>
                 <li>Développement de nouveaux composants GWT</li>
                 <li>Analyse et correction des anomalies</li>
                 <li>Documentation technique des composants</li>
             </ul>
-            
+
             <div class="tech-stack">
                 <span class="tech-label">Technologies :</span> GWT, EJB3, Spring IoC, JPA/Hibernate, Oracle 10g, JBoss AS 7, Maven, Jenkins, SonarQube, JUnit, Eclipse, SVN
             </div>
         </div>
     </div>
-    
+
     <!-- SII MAROC -->
     <div class="job-header clearfix">
         <span class="job-period">Mars 2012 – Avril 2015</span>
         <div class="job-title">Ingénieur R&D Java/JEE | SII MAROC – GEMALTO</div>
     </div>
-    
+
     <div class="section-content">
         <div class="project">
             <div class="project-title">Projet #5 : DPCM (Data Personalization & Card Manufacturing)</div>
             <p><strong>Contexte :</strong> Application pour la personnalisation et la production de cartes sécurisées (permis de conduire, cartes d'identité, cartes bancaires).</p>
-            
+
             <p style="margin-top: 0.2cm;"><strong>Responsabilités :</strong></p>
             <ul>
                 <li>Participation aux phases d'étude et conception technique de la plateforme DPCM</li>
@@ -395,86 +572,86 @@
                 <li>Rédaction de la documentation technique (installation, paramétrage)</li>
                 <li>Analyse et correction des anomalies</li>
             </ul>
-            
+
             <p style="margin-top: 0.2cm;"><strong>Validation et qualité :</strong></p>
             <ul>
                 <li>Développement des tests unitaires et d'intégration</li>
                 <li>Rédaction des VTP et VTR (Validation Test Plan/Report)</li>
                 <li>Développement d'un module d'intégration avec TestRail</li>
             </ul>
-            
+
             <div class="tech-stack">
                 <span class="tech-label">Technologies :</span> JSF 2.0 (PrimeFaces), Spring Security, CDI, JPA/Hibernate, EJB3, Oracle 10g, JBoss AS 7, Web Services, LDAP, Maven, Git, Jenkins, SonarQube, Selenium, JUnit, Eclipse, Toad
             </div>
         </div>
-        
+
         <div class="project">
             <div class="project-title">Projet #4 : E-Tester (Projet interne SII)</div>
             <p><strong>Contexte :</strong> Application d'évaluation des connaissances techniques des candidats pour le recrutement.</p>
-            
+
             <p style="margin-top: 0.2cm;"><strong>Réalisation :</strong> Proposition, étude, conception et développement complet de la solution.</p>
-            
+
             <div class="tech-stack">
                 <span class="tech-label">Technologies :</span> Spring Framework, JSF 2.0 (PrimeFaces), JPA/Hibernate, MySQL, Tomcat, Maven, Git, Eclipse
             </div>
         </div>
     </div>
-    
+
     <!-- EVISION -->
     <div class="job-header clearfix">
         <span class="job-period">Février 2009 – Mars 2012</span>
         <div class="job-title">Analyste Développeur Java/JEE | EVISION</div>
     </div>
-    
+
     <div class="section-content">
         <div class="project">
             <div class="project-title">Projet #3 : CAMS (FCI Awards Management System)</div>
             <p><strong>Contexte :</strong> Système de gestion des fonds de recherche pour la Fondation Canadienne pour l'Innovation (FCI), permettant aux universités, collèges et hôpitaux de gérer leurs programmes de recherche.</p>
-            
+
             <p style="margin-top: 0.2cm;"><strong>Responsabilités :</strong></p>
             <ul>
                 <li>Développement des portails Web pour le projet CAMS</li>
                 <li>Développement du module de reporting avancé</li>
             </ul>
-            
+
             <div class="tech-stack">
                 <span class="tech-label">Technologies :</span> JSF (IceFaces), EJB3, JPA, Oracle 10g, WebLogic, SSO, Flying Saucer (PDF), HTML, JavaScript, jQuery, CSS, MyEclipse, JDeveloper, Toad, JIRA, SVN
             </div>
         </div>
-        
+
         <div class="project">
             <div class="project-title">Projet #2 : eAwards</div>
             <p><strong>Contexte :</strong> Logiciel de gestion des bourses et subventions permettant de contrôler et simplifier le processus d'administration de la recherche, incluant l'analyse de données et la simulation de scénarios.</p>
-            
+
             <p style="margin-top: 0.2cm;"><strong>Responsabilités :</strong></p>
             <ul>
                 <li>Développement des portails Web pour le projet eAwards</li>
                 <li>Tests et intégration des livrables</li>
                 <li>Déploiement sur les environnements Dev et Test</li>
             </ul>
-            
+
             <div class="tech-stack">
                 <span class="tech-label">Technologies :</span> JSF 1.2/2.0 (PrimeFaces, Tomahawk, Facelets), Struts 1, EJB3, Oracle 10g, WebLogic, Flying Saucer, HTML, JavaScript, jQuery, CSS, NetBeans, MyEclipse, JDeveloper, Toad, JIRA, SVN
             </div>
         </div>
-        
+
         <div class="project">
             <div class="project-title">Projet #1 : eSemantics</div>
             <p><strong>Contexte :</strong> Moteur de recherche avancé capable d'analyser tout type de document et d'extraire des correspondances morphologiques ou sémantiques des mots recherchés.</p>
-            
+
             <p style="margin-top: 0.2cm;"><strong>Responsabilités :</strong></p>
             <ul>
                 <li>Conception et développement complet de la solution Web</li>
                 <li>Tests et intégration dans les autres portails</li>
                 <li>Développement d'utilitaires : FormBuilder, Gestionnaire de textes (MetaModel), Composants réutilisables</li>
             </ul>
-            
+
             <div class="tech-stack">
                 <span class="tech-label">Technologies :</span> Java/J2EE (JSP, Servlets), JSF 2.0 (PrimeFaces, Facelets), EJB3, Oracle 10g, HTML, JavaScript, jQuery, CSS, MyEclipse, NetBeans, JDeveloper, Toad
             </div>
         </div>
     </div>
-    
+
     <!-- FORMATION -->
     <h2>FORMATION</h2>
     <div class="section-content">
@@ -484,19 +661,19 @@
             Option : Informatique, Réseaux, Services (IRS)<br>
             <em>Majorant de la promotion – Mention : Bien</em>
         </div>
-        
+
         <div style="margin-bottom: 0.3cm;">
             <strong>2004-2007 : Licence en Sciences Mathématiques et Informatique</strong><br>
             Faculté des Sciences, Fès<br>
             <em>Majorant de la promotion – Mention : Bien</em>
         </div>
-        
+
         <div>
             <strong>2003 : Baccalauréat Scientifique</strong><br>
             Option : Sciences Expérimentales
         </div>
     </div>
-    
+
     <!-- CERTIFICATIONS -->
     <h2>CERTIFICATIONS</h2>
     <div class="section-content">
@@ -507,12 +684,68 @@
             <strong>2014 :</strong> Oracle Certified Professional, Java SE 6 Programmer
         </div>
     </div>
-    
-    <script>
-        // Fonction pour imprimer le document
-        function printCV() {
-            window.print();
+
+</div> <!-- Fin du contenu CV -->
+
+<script>
+    // CODE D'ACCÈS PAR DÉFAUT (à modifier selon vos besoins)
+    const CORRECT_PASSWORD = "cv2024";
+
+    // Vérifier si l'utilisateur est déjà authentifié (session)
+    if (sessionStorage.getItem('cvUnlocked') === 'true') {
+        unlockCV();
+    }
+
+    // Permettre la validation avec la touche Entrée
+    document.getElementById('passwordInput').addEventListener('keypress', function(e) {
+        if (e.key === 'Enter') {
+            checkPassword();
         }
-    </script>
+    });
+
+    // Fonction de vérification du mot de passe
+    function checkPassword() {
+        const password = document.getElementById('passwordInput').value;
+        const errorMessage = document.getElementById('errorMessage');
+
+        if (password === CORRECT_PASSWORD) {
+            // Sauvegarder l'authentification dans la session
+            sessionStorage.setItem('cvUnlocked', 'true');
+            unlockCV();
+        } else {
+            // Afficher le message d'erreur
+            errorMessage.style.display = 'block';
+            document.getElementById('passwordInput').value = '';
+            document.getElementById('passwordInput').focus();
+
+            // Effet de shake
+            const loginContainer = document.querySelector('.login-container');
+            loginContainer.style.animation = 'shake 0.5s';
+            setTimeout(() => {
+                loginContainer.style.animation = '';
+            }, 500);
+        }
+    }
+
+    // Fonction pour déverrouiller le CV
+    function unlockCV() {
+        document.getElementById('loginPage').style.display = 'none';
+        document.getElementById('cvContent').classList.add('unlocked');
+        document.body.style.background = 'white';
+    }
+
+    // Fonction pour imprimer le document
+    function printCV() {
+        window.print();
+    }
+</script>
+
+<style>
+    @keyframes shake {
+        0%, 100% { transform: translateX(0); }
+        10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+        20%, 40%, 60%, 80% { transform: translateX(10px); }
+    }
+</style>
 </body>
 </html>
